@@ -7,8 +7,9 @@
 
 2. Installation & Execution
   -> Install Tools (Windows users):
-     - [WinFlexBison](https://github.com/lexxmark/winflexbison)
-     - [MSYS2](https://www.msys2.org/) or [MinGW](https://www.mingw-w64.org/)
+     - [WinFlexBison](https://gnuwin32.sourceforge.net/packages/bison.htm)
+     - [MSYS2](https://github.com/msys2/msys2-installer/releases/download/2024-12-08/msys2-x86_64-20241208.exe) or [MinGW](https://www.mingw-w64.org/)
+        Recommend visiting (https://code.visualstudio.com/docs/cpp/config-mingw)
   -> Clone the Repository:
      ```bash
         git clone https://github.com/RoneyBABA/SQL_parser.git
