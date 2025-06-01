@@ -1,0 +1,42 @@
+1. Requirements
+  - Python 3.x  (Used Version: 3.12.6)
+  - `tkinter` (comes with standard Python)
+  - Flex (`win_flex` or `flex.exe`)         (Used Version: 2.5.4)
+  - Bison (`win_bison` or `bison.exe`)      (Used Version: 2.4.1)		
+  - GCC (`MinGW` or `MSYS2` for Windows)    (Used Version: 15.1.0)
+
+2. Installation & Execution
+  -> Install Tools (Windows users):
+     - [WinFlexBison](https://github.com/lexxmark/winflexbison)
+     - [MSYS2](https://www.msys2.org/) or [MinGW](https://www.mingw-w64.org/)
+  -> Clone the Repository:
+     ```bash
+        git clone https://github.com/RoneyBABA/SQL_parser.git
+     - After cloning,
+        cd sql-editor
+
+3. Update Paths in Python code:
+   -> Replace these lines with the actual paths to your tools:
+	self.win_flex_path = r"C:\GnuWin32\bin\flex.exe"
+        self.win_bison_path = r"C:\GnuWin32\bin\bison.exe"
+        self.gcc_path = r"C:\msys64\ucrt64\bin\gcc.exe"
+
+4. Building parser.exe
+   -> You have to compile lex and yacc files in your terminal (cmd) to build the parser.exe
+	C:\minor>flex (lex_file).l
+	C:\minor>bison -d (yacc_file).y
+	C:\minor>gcc -o parser (yacc_file).tab.c lex.yy.c -lfl
+
+  -> Example
+	D:\minor>flex sql_lex.l
+	D:\minor>bison -d sql_yacc.y
+	D:\minor>gcc -o parser sql_yacc.tab.c lex.yy.c -lfl
+       
+5. Running the Python GUI
+  -> Ensure that the parser.exe is being executed (Check parser.exe in the task manager)
+     -Run the python code by executing python sql_editor.py
+
+6. Simple Test Cases
+      1. SELECT name, age FROM users;
+      2. SELECT id FROM employees WHERE salary;
+      -> Try removing the semicolon or breaking the query to test syntax errors.
