@@ -19,13 +19,5 @@ Parser       | Bison (Yacc)
 Compiler     | GCC (MinGW or MSYS2) 
 OS Support   | Windows (tested) 
 
-File Structure:
-sql-editor/
-├── sql_editor.py       # Main GUI app
-├── sql_lex.l           # Lex/Flex file for tokenizing SQL
-├── sql_yacc.y          # Yacc/Bison grammar file for SQL
-├── parser.exe          # Auto-generated parser executable (after build)
-└── README.txt          # Project documentation
-
 License:
 This project is open source and available under the MIT License.
